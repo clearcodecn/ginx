@@ -1,4 +1,4 @@
-package ginsass
+package ginx
 
 import (
 	"net/http"
