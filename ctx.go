@@ -79,7 +79,7 @@ func (e *Engine) init() {
 	})
 	// ads.txt
 	e.GET("ads.txt", "", func(ctx *Context) error {
-		ctx.String(200, ctx.DomainConfig.RootTxt)
+		ctx.String(200, ctx.DomainConfig.AdsTxt)
 		return nil
 	})
 
