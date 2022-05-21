@@ -77,6 +77,11 @@ func (e *Engine) init() {
 		ctx.String(200, ctx.DomainConfig.RootTxt)
 		return nil
 	})
+	// ads.txt
+	e.GET("ads.txt", "", func(ctx *Context) error {
+		ctx.String(200, ctx.DomainConfig.RootTxt)
+		return nil
+	})
 
 	e.Any("/api/reload", func(ctx *gin.Context) {
 		if ctx.GetHeader(XToken) != GlobalConfig().Token {

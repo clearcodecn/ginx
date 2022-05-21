@@ -33,6 +33,7 @@ type DomainConfig struct {
 	Keywords             string   `json:"keywords" yaml:"keywords"`                         // 关键词
 	Copyright            string   `json:"copyright" yaml:"copyright"`                       // 版权信息
 	RootTxt              string   `json:"rootTxt" yaml:"rootTxt"`                           //  /root.txt 文件内容
+	AdsTxt               string   `json:"adsTxt" yaml:"adsTxt"`                             //  /ads.txt 文件内容
 	GoogleSiteVerify     string   `json:"googleSiteVerify" yaml:"googleSiteVerify"`         // googlecfea2817ba1aa4c7.html
 	GoogleSiteVerifyText string   `json:"googleSiteVerifyText" yaml:"googleSiteVerifyText"` // google 网站内容
 	Spiders              []string `json:"spiders" yaml:"spiders"`                           // 爬虫
