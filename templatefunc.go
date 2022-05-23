@@ -31,6 +31,7 @@ func (t *TplFunc) TemplateFunc() template.FuncMap {
 		"split":  t.Split,
 		"assets": t.assets,
 		"base64": t.base64,
+		"html":   t.html,
 	}
 }
 
@@ -44,4 +45,11 @@ func (t *TplFunc) base64(s string) string {
 		return ""
 	}
 	return base64.StdEncoding.EncodeToString([]byte(s))
+}
+
+func (t *TplFunc) html(s string) template.HTML {
+	if len(s) == 0 {
+		return ""
+	}
+	return template.HTML(s)
 }
